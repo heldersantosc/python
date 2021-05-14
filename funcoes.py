@@ -19,3 +19,18 @@ def call_number_with_limit(limit):
 
 
 call_number_with_limit(5)
+
+
+print("---------------")
+
+
+def calculator(x, y):
+    soma = x + y
+    return soma
+
+
+soma = calculator(20, 4)
+print(soma)
+
+soma = calculator(y=10, x=5)
+print(soma)
