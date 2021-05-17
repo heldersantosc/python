@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "d:\\Projetos\\python\\schoolofnet\\venv\\Scripts\\python.exe"
+  "python.pythonPath": "d:\\Projetos\\python\\schoolofnet\\venv\\Scripts\\python.exe",
+  "pythonautovenv.venvDirectoryNames": [".venv", "venv"]
 }
