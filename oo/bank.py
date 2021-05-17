@@ -1,22 +1,33 @@
-class Account:
+class Account(object):
     def __init__(self, number):
         self.number = number
-        self.total = 0
+        self.__total = 0
 
     def deposit(self, value):
-        self.total += value
+        self.__total += value
 
     def withdraw(self, value):
-        self.total -= value
+        self.__total -= value
 
     def getTotal(self):
-        return self.total
+        return self.__total
 
 
-conta_helder = Account(123)
+class Bank(Account):
+    def __init__(self, number, cvv):
+        super(Bank, self).__init__(number)
+        self.cvv = cvv
+
+    def withdraw(self, value):
+        self._Account__total -= value
+
+
+conta_helder = Bank(123, 223)
 
 conta_helder.deposit(100)
-print(conta_helder.total)
+print(conta_helder.getTotal())
 
 conta_helder.withdraw(20)
-print(conta_helder.total)
+print(conta_helder.getTotal())
+
+print(conta_helder.cvv)
